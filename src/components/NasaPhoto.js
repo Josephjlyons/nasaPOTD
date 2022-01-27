@@ -7,7 +7,8 @@ const apiKey = process.env.REACT_APP_NASA_API_KEY;
 
 const NasaPhoto = () => {
     const [photoData, setPhotoData] = useState();
-
+    const [isLoading, setIsLoading] = useState(true);
+    const [httpError, setHttpError] = useState()
 
     useEffect(() => {
         fetchPhoto();
@@ -17,15 +18,30 @@ const NasaPhoto = () => {
             );
             const data = await res.json();
             setPhotoData(data);
-            console.log(data)
+            setIsLoading(false)
         }
+        fetchPhoto().catch(error => {
+            setIsLoading(false);
+            setHttpError(error.message);
+        })
     }, []);
 
-    if (!photoData) {
-        return (
-            <p>No photo found</p>
-        )
+    if(isLoading){
+        return <section className='loading'>
+            <p>Loading Image...</p>
+        </section>
     }
+
+    if(httpError) {
+        return <section className='error'>
+            <p>{httpError}</p>
+        </section>
+    }
+
+    // if (!photoData) {
+    //     return <p>No photo found </p>
+    // }
+
     return (
         <>
             <NavBar />
