@@ -7,12 +7,12 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-
+    <div className='app'>
       <Routes>
         <Route index element={<Home />} />
         <Route path='/nasaphoto' element={<NasaPhoto />} />
       </Routes>
-
+    </div>
     </BrowserRouter>
   );
 }
