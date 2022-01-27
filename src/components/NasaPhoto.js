@@ -29,6 +29,7 @@ const NasaPhoto = () => {
     if(isLoading){
         return <section className='loading'>
             <p>Loading Image...</p>
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </section>
     }
 
