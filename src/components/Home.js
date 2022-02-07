@@ -6,9 +6,9 @@ const Home =()=> {
 return(
     <div className='home'>
         <Link className='link' to='/nasaphoto'>Check Out The Photo Of The Day!</Link>
-        
-        
+        <Link className='link' to='/nasaphotos'>Check out multiple Random Photos Of The Day!</Link>
     </div>
+
 )
 }
 
