@@ -21,6 +21,7 @@ const NasaPhotos = () => {
             const data = await res.json();
             setPhotoData(data);
             setIsLoading(false)
+          
         }
         fetchPhotos().catch(error => {
             setIsLoading(false);
@@ -31,7 +32,7 @@ const NasaPhotos = () => {
     if(isLoading){
         return <section className='loading'>
             <p>Loading Image...</p>
-            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </section>
     }
 
@@ -41,14 +42,14 @@ const NasaPhotos = () => {
         </section>
     }
 
-    // if (!photoData) {
-    //     return <p>No photo found </p>
-    // }
+ 
 
     return (
         <>
             <NavBar />
-            <div className='nasa-photo'>
+        {photoData.map((photoData) => {
+            return(
+              <div className='nasa-photo'>
                 {photoData.media_type === 'image' ? (
                     <img
                     src={photoData.url}
@@ -69,7 +70,10 @@ const NasaPhotos = () => {
                     <p className='date'>{photoData.date}</p>
                     <p className='explanation'>{photoData.explanation}</p>
                 </div>
-            </div>
+            </div>  
+            )
+        })}
+            
         </>
 
     )
