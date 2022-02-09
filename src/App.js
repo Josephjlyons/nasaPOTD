@@ -4,6 +4,7 @@ import Home from './components/Home';
 import NasaPhoto from './components/NasaPhoto';
 import './App.css';
 import NasaPhotos from './components/NasaPhotos';
+import SearchPhotos from './components/SearchPhotos';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='/nasaphoto' element={<NasaPhoto />} />
         <Route path='/nasaphotos' element={<NasaPhotos />} />
+        <Route path='/searchphotos' element={<SearchPhotos />} />
       </Routes>
     </div>
     </BrowserRouter>
