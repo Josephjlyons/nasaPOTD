@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
+import LoadSpinner from './LoadSpinner/LoadSpinner';
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
 
@@ -11,7 +12,6 @@ const NasaPhoto = () => {
     const [httpError, setHttpError] = useState()
 
     useEffect(() => {
-        fetchPhoto();
         async function fetchPhoto() {
             const res = await fetch(
                 `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`
@@ -29,7 +29,7 @@ const NasaPhoto = () => {
     if(isLoading){
         return <section className='loading'>
             <p>Loading Image...</p>
-            <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <LoadSpinner />
         </section>
     }
 
