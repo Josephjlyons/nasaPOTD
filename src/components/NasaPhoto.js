@@ -26,14 +26,14 @@ const NasaPhoto = () => {
         })
     }, []);
 
-    if(isLoading){
+    if (isLoading) {
         return <section className='loading'>
             <p>Loading Image...</p>
             <LoadSpinner />
         </section>
     }
 
-    if(httpError) {
+    if (httpError) {
         return <section className='error'>
             <p>{httpError}</p>
         </section>
@@ -49,19 +49,19 @@ const NasaPhoto = () => {
             <div className='nasa-photo'>
                 {photoData.media_type === 'image' ? (
                     <img
-                    src={photoData.url}
-                    alt={photoData.title}
-                    className='photo'></img>
+                        src={photoData.url}
+                        alt={photoData.title}
+                        className='photo'></img>
                 ) : (
-                <iframe
-                    className='photo'
-                    title='space video'
-                    src={photoData.url}
-                    frameBorder='0'
-                    allow='encrypted-media'
-                    allowFullScreen
-                />
-            )}
+                    <iframe
+                        className='photo'
+                        title='space video'
+                        src={photoData.url}
+                        frameBorder='0'
+                        allow='encrypted-media'
+                        allowFullScreen
+                    />
+                )}
                 <div>
                     <h1>{photoData.title}</h1>
                     <p className='date'>{photoData.date}</p>
