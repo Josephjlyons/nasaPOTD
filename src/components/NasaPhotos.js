@@ -1,14 +1,14 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import LoadSpinner from './LoadSpinner/LoadSpinner';
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
 
 
 //multiple returned images in work//
 
-const NasaPhotos = () => {
+const NasaPhotos = (props) => {
     const [photoData, setPhotoData] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const [httpError, setHttpError] = useState()

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import LoadSpinner from './LoadSpinner/LoadSpinner';
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
 
 
 const apiKey = process.env.REACT_APP_NASA_API_KEY;
@@ -15,13 +15,13 @@ const SearchPhotos = (props) => {
     const [photoData, setPhotoData] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const [httpError, setHttpError] = useState();
-    let startDate = props.enteredStartDate;
-    let endDate = props.enteredEndDate
-
-
+    
+    
 
     useEffect(() => {
-        setIsLoading()
+        const startDate = '2022-01-09';
+        const endDate = '2022-01-15';
+        
 
         async function fetchPhotos() {
             const res = await fetch(
@@ -36,7 +36,7 @@ const SearchPhotos = (props) => {
         fetchPhotos().catch(error => {
             setHttpError(error.message);
         })
-    }, [startDate, endDate]);
+    }, []);
 
     if (isLoading) {
         return <section className='loading'>
