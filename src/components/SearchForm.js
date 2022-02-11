@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 
 
+
+
 const SearchForm = (props) => {
     const [enteredStartDate, setEnteredStartDate] = useState('');
     const [enteredEndDate, setEnteredEndDate] = useState('');
@@ -23,6 +25,7 @@ const SearchForm = (props) => {
 
     };
 
+
     return (
         <>
             <NavBar />
@@ -32,7 +35,7 @@ const SearchForm = (props) => {
                     <input type='text' id='startDate' placeholder='yyyy-mm-dd' onChange={startDateInputChangeHandler} />
                     <label htmlFor='endDate'>Enter An End Date: </label>
                     <input type='endDate' id='endDate' placeholder='yyyy-mm-dd' onChange={endDateInputChangeHandler} />
-                    <button>Submit</button>
+                    <button >Submit</button>
 
                     <Link to='/searchphotos' className='btn btn-primary'>BUTTON</Link>
                 </div>
