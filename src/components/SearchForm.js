@@ -42,7 +42,7 @@ const SearchForm = (props) => {
                         <input className='input' type='endDate' id='endDate' placeholder='yyyy-mm-dd' onChange={endDateInputChangeHandler} />
                     </div>
 
-                    {/* <button>Submit</button> */}
+                    <button>Submit</button>
 
                     <Link to='/searchphotos' className='btn'>Submit</Link>
                 </div>

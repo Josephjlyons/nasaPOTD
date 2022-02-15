@@ -6,19 +6,26 @@ import './App.css';
 import NasaPhotos from './components/NasaPhotos';
 import SearchPhotos from './components/SearchPhotos';
 import SearchForm from './components/SearchForm';
+import SearchFormTwo from './components/SearchFormTwo'
+
 
 function App(props) {
+
+
   return (
+
     <BrowserRouter>
-    <div className='app'>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path='/nasaphoto' element={<NasaPhoto />} />
-        <Route path='/nasaphotos' element={<NasaPhotos />} />
-        <Route path='/searchphotos' element={<SearchPhotos />} />
-        <Route path='/searchform' element={<SearchForm />} />
-      </Routes>
-    </div>
+      <div className='app'>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path='/nasaphoto' element={<NasaPhoto />} />
+          <Route path='/nasaphotos' element={<NasaPhotos />} />
+          <Route path='/searchphotos' element={<SearchPhotos />} />
+          <Route path='/searchform' element={<SearchForm />} />
+          <Route path='/searchformtwo' element={<SearchFormTwo />} />
+
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

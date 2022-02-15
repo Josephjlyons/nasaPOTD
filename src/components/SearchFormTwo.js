@@ -15,17 +15,10 @@ class SearchDate extends React.Component {
         };
     };
 
-    handleStartDateChange(event) {
+    handleDateChange(event) {
         let dates = this.state.dates
         let searchStartDate = event.target.value;
         dates.startDate = searchStartDate;
-        this.setState({
-            dates: dates
-        });
-    }
-
-    handleEndDateChange(event) {
-        let dates = this.state.dates
         let searchEndDate = event.target.value;
         dates.endDate = searchEndDate
         this.setState({
@@ -33,14 +26,25 @@ class SearchDate extends React.Component {
         });
     }
 
+    // handleEndDateChange(event) {
+    //     let dates = this.state.dates
+    //     let searchEndDate = event.target[0].value;
+    //     dates.endDate = searchEndDate
+    //     this.setState({
+    //         dates: dates
+    //     });
+    // }
+
     handleButtonClick(event) {
         event.preventDefault();
-        console.log(this.state.dates)
+
     }
 
     handleSubmit(event) {
         event.preventDefault()
-        SearchPhotos()
+        console.log(this.state.dates)
+        SearchPhotos();
+
     }
 
     render() {
@@ -48,18 +52,18 @@ class SearchDate extends React.Component {
         <NavBar />
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form >
 
                     <label>
                         Start Date:
                     </label>
-                    <input type="text" onChange={this.handleStartDateChange.bind(this)} />
+                    <input type="text" name='startdate' value={this.state.dates.startDate || ''} onChange={this.handleDateChange.bind(this)} />
                     <br />
                     <label>
                         End Date:
                     </label>
-                    <input type='text' onChange={this.handleEndDateChange.bind(this)} />
-                    <Link to='/searchphotos'  onSubmit={this.handleSubmit}>Submit</Link>
+                    <input type='text' name='enddate' value={this.state.dates.endDate || ''} onChange={this.handleDateChange.bind(this)} />
+                    <button onClick={this.handleButtonClick.bind(this)} onSubmit={this.handleSubmit} >Submit</button>
                 </form>
             </div>
         )
