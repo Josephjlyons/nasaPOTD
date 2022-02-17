@@ -24,7 +24,7 @@ const SearchPhotos = (props) => {
 
 
     useEffect(() => {
-        setIsLoading()
+   
 
         async function fetchPhotos() {
             const res = await fetch(
