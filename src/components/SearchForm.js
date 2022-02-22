@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import NavBar from './NavBar/NavBar'
 import { Link } from 'react-router-dom'
 import './SearchForm.css'
@@ -8,8 +8,10 @@ import './SearchForm.css'
 
 
 const SearchForm = (props) => {
-    const [enteredStartDate, setEnteredStartDate] = useState('');
-    const [enteredEndDate, setEnteredEndDate] = useState('');
+    const startDateRef = useRef();
+    const endDateRef = useRef();
+    const [enteredStartDate, setEnteredStartDate] = useState();
+    const [enteredEndDate, setEnteredEndDate] = useState();
 
     const startDateInputChangeHandler = event => {
         setEnteredStartDate(event.target.value)
@@ -21,7 +23,9 @@ const SearchForm = (props) => {
 
     const formSubmissionHandler = event => {
         event.preventDefault();
-        console.log(enteredStartDate, enteredEndDate);
+        // console.log(enteredStartDate, enteredEndDate);
+        console.log(startDateRef.current.value)
+        console.log(endDateRef.current.value)
 
 
     };
@@ -35,11 +39,11 @@ const SearchForm = (props) => {
                 <div className='control-group'>
                     <div>
                         <label htmlFor='startDate'> Enter A Start Date: </label>
-                        <input className='input' type='text' id='startDate' placeholder='yyyy-mm-dd' onChange={startDateInputChangeHandler} />
+                        <input className='input' type='text' id='startDate' placeholder='yyyy-mm-dd' onChange={startDateInputChangeHandler} ref={startDateRef} />
                     </div>
                     <div>
                         <label htmlFor='endDate'>Enter An End Date: </label>
-                        <input className='input' type='endDate' id='endDate' placeholder='yyyy-mm-dd' onChange={endDateInputChangeHandler} />
+                        <input className='input' type='endDate' id='endDate' placeholder='yyyy-mm-dd' onChange={endDateInputChangeHandler} ref={endDateRef}/>
                     </div>
 
                     <button>Submit</button>
