@@ -6,10 +6,10 @@ import './App.css';
 import NasaPhotos from './components/NasaPhotos';
 import SearchPhotos from './components/SearchPhotos';
 import SearchForm from './components/SearchForm';
-import SearchFormTwo from './components/SearchFormTwo'
+// import SearchFormTwo from './components/SearchFormTwo;'
 
 
-function App(props) {
+const App = (props) => {
 
   const [enteredStartDate, setEnteredStartDate] = useState('');
   const [enteredEndDate, setEnteredEndDate] = useState('');
@@ -35,13 +35,13 @@ function App(props) {
           <Route index element={<Home />} />
           <Route path='/nasaphoto' element={<NasaPhoto />} />
           <Route path='/nasaphotos' element={<NasaPhotos />} />
-          <Route path='/searchphotos' element={<SearchPhotos startDate={enteredStartDate} endDate={enteredEndDate} />} />
           <Route path='/searchform' element={<SearchForm  />} />
-          <Route path='/searchformtwo' element={<SearchFormTwo />} />
+          <Route path='/searchphotos' element={<SearchPhotos startDate={enteredStartDate} endDate={enteredEndDate} />} />
+          {/* <Route path='/searchformtwo' element={<SearchFormTwo />} /> */}
         </Routes>
       </div>
       <br />
-      <div>
+      {/* <div>
         <form onSubmit={formSubmissionHandler}>
           <div className='control-group'>
             <h1>Search a date range</h1>
@@ -56,7 +56,7 @@ function App(props) {
             <Link  to='/searchphotos' className='btn'>Submit</Link>
           </div>
         </form>
-      </div>
+      </div> */}
 
     </BrowserRouter>
   );
