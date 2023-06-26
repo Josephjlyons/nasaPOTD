@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+
+
+*,
+::before,
+::after {
+    margin: 0; 
+    padding: 0;
+    box-sizing: inherit; 
+    background:rgb(18, 1, 1);
+}
+body{
+    font-family: 'Open Sans Condensed';
+    overflow: none;
+    color: white;
+}
+
+html{
+    font-size: 62.5%; /*1 rem = 10px */
+    box-sizing: border-box;
+}
+ /* Nasa Photo and properties */
+
+
+
+.loading{
+    font-size: 3rem;
+    color: white;
+    margin-left: 20px;
+}
+
+
+

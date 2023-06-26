@@ -1,0 +1,30 @@
+.formContainer{
+    grid-column: 1/-1;
+    padding: 10rem;
+    grid-row: 2/2;
+    margin: 0 auto;
+    display:grid;
+}
+.control-group {
+margin: 0 auto;
+
+}
+
+
+.input {
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+}
+
+input:focus{
+    background-color: black;
+}
+
+.btn{
+    background-color: white;
+    border-radius: 3px;
+
+    font-size: 17px;
+
+}
