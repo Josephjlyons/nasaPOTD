@@ -52,7 +52,7 @@ const NasaPhotoCollection = (props) => {
         <>
             <NavBar />
             {Object.entries(photoData).map(([key, photoData], i) => {
-                console.log(key, i, photoData)
+            
                 return (
                     <div >
                         <div className='potdCollection' key={[i]}>

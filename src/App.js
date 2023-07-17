@@ -11,11 +11,7 @@ import SearchForm from './components/SearchForm';
 
 
 
-const App = (props) => {
-
-
-
-
+const App = () => {
 
 
   return (
