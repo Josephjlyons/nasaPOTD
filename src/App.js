@@ -11,7 +11,7 @@ import SearchForm from './components/SearchForm';
 
 
 
-const App = () => {
+const App = (props) => {
 
 
   return (
@@ -22,7 +22,7 @@ const App = () => {
       <div className='app'>
         <div className='container'>
           <Routes>
-            <Route index element={<Home />} />
+            <Route path='/' element={<Home />} />
             <Route path='/nasaphoto' element={<NasaPhoto />} />
             <Route path='/nasaphotos' element={<NasaPhotoCollection />} />
             <Route path='/searchform' element={<SearchForm />} />
