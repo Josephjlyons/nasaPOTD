@@ -24,13 +24,13 @@ const NasaPhotoCollection = (props) => {
             const data = await res.json();
             setPhotoData(data);
             setIsLoading(false);
-            
+
         }
         fetchPhotos().catch(error => {
             setIsLoading(false);
             setHttpError(error.message);
         })
-        // fetchPhotos();
+   
     }, [setPhotoData, setIsLoading]);
 
     if (isLoading) {
@@ -47,50 +47,45 @@ const NasaPhotoCollection = (props) => {
     }
 
 
-    // let data = photoData.map(function(nextValue){
-    //     return `<h2 'className=pod'>${nextValue.date} ${nextValue.explanation}</h2>
-    //     <img src=${nextValue.url}</img>`
-    // });
-    // document.body.innerHTML = data;
-
-    
     return (
-        
+
         <>
             <NavBar />
             {Object.entries(photoData).map(([key, photoData], i) => {
-            console.log(key, i, photoData)
-                return(
-                    <div className='photoContainer'>
-                <div className='potdCollection' key={[i]}>
-                    {photoData.media_type === 'image' ? (
-                        <img
-                            src={photoData.url}
-                            alt={photoData.title}
-                            className='potdCollection__photo'></img>
-                    ) : (
-                        <iframe
-                            className='potdCollection__photo'
-                            title='space video'
-                            src={photoData.url}
+                console.log(key, i, photoData)
+                return (
+                    <div >
+                        <div className='potdCollection' key={[i]}>
+                            <div className='potdCollection__imgContainer'>
+                                {photoData.media_type === 'image' ? (
+                                    <img
+                                        src={photoData.url}
+                                        alt={photoData.title}
+                                        className='potdCollection__photo'></img>
+                                ) : (
+                                    <iframe
+                                        className='potdCollection__photo'
+                                        title='space video'
+                                        src={photoData.url}
 
-                            allow='encrypted-media'
-                            allowFullScreen
-                        />
-                    )}
-                    <div className='potdCollection__details'>
-                        <h1 className='potdCollection__details--title'>{photoData.title}</h1>
-                        <p className='potdCollection__details--date'>{photoData.date}</p>
-                        <p className='potdCollection__details--explanation'>{photoData.explanation}</p>
+                                        allow='encrypted-media'
+                                        allowFullScreen
+                                    />
+                                )}
+                            </div>
+                            <div className='potdCollection__details'>
+                                <p className='potdCollection__details potdCollection__details--title'>{photoData.title}</p>
+                                <p className='potdCollection__details potdCollection__details--date'>{photoData.date}</p>
+                                <p className='potdCollection__details potdCollection__details--explanation'>{photoData.explanation}</p>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-                
+
 
 
                 )
 
-                        })}
+            })}
 
         </>
 
