@@ -4,7 +4,7 @@ import React from 'react';
 
 
 const PhotoSearchRender = (props) => {
-    console.log(props)
+    
     return (
         <>
             {Object.entries(props.photoProps).map(([key, photoProps], i) => {

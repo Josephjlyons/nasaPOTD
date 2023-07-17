@@ -17,9 +17,9 @@ const Home = (props) => {
                 </video>
             </section>
             <h1 className='home__header'>NASA Photo Search and Query</h1>
-            <button className='home__link home__link--1'><Link to='/nasaphoto'>Photo of the day</Link></button>
-            <button className='home__link home__link--2' ><Link to='/nasaphotos'>10 random P.O.T.D.</Link></button>
-            <button className='home__link home__link--3'>  <Link to='/searchform'>Search date Range</Link></button>
+            <button className='home__link home__link--1'><Link to='nasaPOTD/nasaphoto'>Photo of the day</Link></button>
+            <button className='home__link home__link--2' ><Link to='nasaPOTD/nasaphotos'>10 random P.O.T.D.</Link></button>
+            <button className='home__link home__link--3'>  <Link to='nasaPOTD/searchform'>Search date Range</Link></button>
 
         </div>
 

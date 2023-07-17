@@ -5,7 +5,7 @@ import NasaPhoto from './components/NasaPhoto';
 import './App.scss';
 import './scss/_base.scss';
 import NasaPhotoCollection from './components/NasaPhotoCollection';
-import PhotoSearchRender from './components/PhotoSearchRender';
+
 import SearchForm from './components/SearchForm';
 
 
@@ -14,19 +14,25 @@ import SearchForm from './components/SearchForm';
 const App = (props) => {
 
 
+
+
+
+
   return (
 
     <BrowserRouter>
+    {/* <Home /> */}
 
 
       <div className='app'>
         <div className='container'>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/nasaphoto' element={<NasaPhoto />} />
-            <Route path='/nasaphotos' element={<NasaPhotoCollection />} />
-            <Route path='/searchform' element={<SearchForm />} />
-            <Route path='/photosearchrender' element={<PhotoSearchRender  />} />
+            <Route path='/nasaPOTD' element={<App />} />
+            <Route index element={<Home />} /> 
+            <Route path='nasaPOTD/nasaphoto' element={<NasaPhoto />} />
+            <Route path='nasaPOTD/nasaphotos' element={<NasaPhotoCollection />} />
+            <Route path='nasaPOTD/searchform' element={<SearchForm />} />
+         
           </Routes>
         </div>
       </div>
