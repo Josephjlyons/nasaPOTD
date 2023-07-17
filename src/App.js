@@ -1,5 +1,5 @@
 // import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import NasaPhoto from './components/NasaPhoto';
 import './App.scss';
@@ -20,7 +20,7 @@ const App = (props) => {
 
   return (
 
-    <BrowserRouter>
+    <HashRouter>
     {/* <Home /> */}
 
 
@@ -29,14 +29,14 @@ const App = (props) => {
           <Routes>
             <Route path='/nasaPOTD' element={<App />} />
             <Route index element={<Home />} /> 
-            <Route path='nasaPOTD/nasaphoto' element={<NasaPhoto />} />
-            <Route path='nasaPOTD/nasaphotos' element={<NasaPhotoCollection />} />
-            <Route path='nasaPOTD/searchform' element={<SearchForm />} />
+            <Route path='/nasaphoto' element={<NasaPhoto />} />
+            <Route path='/nasaphotos' element={<NasaPhotoCollection />} />
+            <Route path='/searchform' element={<SearchForm />} />
          
           </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
