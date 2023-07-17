@@ -120,7 +120,14 @@ const SearchForm = () => {
             <>
                 <NavBar />
                 <form className='formContainer' onSubmit={formSubmissionHandler}>
+                 
                     <div className='control-group'>
+                    <ul className='control-group__inputRules'>
+                        <li>Start Date must be after 1995-06-16</li>
+                        <li>End Date must be current date or before</li>
+                        <li>Input Date must follow yyyy-mm-dd format</li>
+                        <li>Once all fields are valid search will automatically commence and render</li>
+                    </ul>
                         <div>
                             <label className='control-group__label' htmlFor='startDate'> Enter A Start Date: </label>
                             <input className='control-group__input' type='text' min='1995-06-16' id='startDate' placeholder='yyyy-mm-dd'
