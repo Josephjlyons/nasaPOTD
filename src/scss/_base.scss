@@ -8,15 +8,14 @@
 }
 
 body {
-
+    background-color: black;
     font-weight: 300;
     overflow: none;
     color: white;
 }
 
 html {
-    font-size: 62.5%;
-    /*1 rem = 10px */
+    font-size: 62.5%;    /*1 rem = 10px */
     box-sizing: border-box;
 }
 
@@ -53,7 +52,7 @@ html {
         height: 100%;
         width: 100%;
         z-index: -1;
-        opacity: .9;
+        // opacity: .9;
         overflow: hidden;
         object-fit: cover;
 

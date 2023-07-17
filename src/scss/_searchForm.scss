@@ -4,6 +4,9 @@
     grid-row: 2/2;
     margin: 0 auto;
     display: flex;
+    background-color: black;
+
+ 
 
 }
 
@@ -12,6 +15,13 @@
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
     color: white;
+
+    &__inputRules{
+        text-align: center;
+        margin-bottom: 2rem;
+        list-style: none;
+        line-height: 3rem;
+    }
 
     &__label {
         font-size: 3rem;
