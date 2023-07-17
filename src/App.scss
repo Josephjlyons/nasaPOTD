@@ -5,29 +5,34 @@
 *,
 ::before,
 ::after {
-    margin: 0; 
+    margin: 0;
     padding: 0;
-    box-sizing: inherit; 
-    background:rgb(18, 1, 1);
+    box-sizing: inherit;
+    // background: rgb(18, 1, 1);
 }
-body{
-    font-family: 'Open Sans Condensed';
+
+body {
+
+    font-weight: 300;
     overflow: none;
     color: white;
 }
 
-html{
-    font-size: 62.5%; /*1 rem = 10px */
+html {
+    font-size: 62.5%;
+    /*1 rem = 10px */
     box-sizing: border-box;
 }
- /* Nasa Photo and properties */
+
+/* Nasa Photo and properties */
 
 
 
-.loading{
+.loading {
+    margin-top: 10rem;
     font-size: 3rem;
     color: white;
-    margin-left: 20px;
+    text-align: center;
 }
 
 

@@ -1,27 +1,34 @@
-.formContainer{
+.formContainer {
     grid-column: 1/-1;
     padding: 10rem;
     grid-row: 2/2;
     margin: 0 auto;
-    display:grid;
+    display: flex;
+
 }
+
 .control-group {
-margin: 0 auto;
-
-}
-
-
-.input {
-    border: 2px solid white;
-    border-radius: 4px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
     color: white;
+
+    &__label {
+        font-size: 3rem;
+    }
+
+    &__input {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
 }
 
-input:focus{
-    // background-color: black;
-}
 
-.btn{
+
+
+
+.btn {
     background-color: white;
     border-radius: 3px;
 
