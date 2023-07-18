@@ -1,4 +1,4 @@
-![Image](src/assests/nasaAPOTD.gif)
+![Image](src/assests/readmePhoto.png)
 
 [Nasa Photo Search and Query Website](https://josephjlyons.github.io/nasaPOTD/#/) 
 
@@ -18,7 +18,7 @@
 * [Email](mailto:josephjlyons90@gmail.com)
 * [LinkedIn](www.linkedin.com/in/joseph-lyons-0a2630200/)
  
- 
+
 
 # License 
 Copyright (c) [2023] [Joseph Lyons]
