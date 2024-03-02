@@ -7,7 +7,7 @@ import backgroundVideo from '../assests/background-video.mp4'
 
 const Home = (props) => {
     return (
-
+ 
         <div className='home'>
             <section className="home__bg-video">
                 <video className="home__bg-video home__bg-video--content" autoPlay muted loop>
